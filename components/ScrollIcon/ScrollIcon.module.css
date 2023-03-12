@@ -1,0 +1,41 @@
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%-20px;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  left: 50%;
+  border-right: 2px rgb(14, 13, 13) solid;
+  border-bottom: 2px rgb(12, 12, 12) solid;
+}
+
+.arrow:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin: -2px 0 0 -2x;
+  border-left: none;
+  border-top: none;
+  border-right: 1px rgb(70, 69, 69) solid;
+  border-bottom: 1px rgb(70, 69, 69) solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-15px, -15px);
+  }
+}

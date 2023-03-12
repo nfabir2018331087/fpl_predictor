@@ -1,0 +1,95 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    min-height: 100vh;
+    /* background-image: url("/stadium.jpg"); */
+    background: linear-gradient(#fff,#f0afad,#fff);
+  }
+  
+  .container {
+  }
+  
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .search {
+    border-radius: 15px;
+    height: 40px;
+    width: 60%;
+    padding-left: 5px;
+  }
+  
+  .searchText {
+    height: 40px;
+    width: 80px;
+    background: #bf7883;
+    display: flex;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    
+  }
+  
+  .detailsContainer {
+    display: flex;
+    border-radius: 30px;
+    padding-top: 15px;
+  }
+  
+  .player {
+    flex: 70%;
+    /* background: yellow; */
+    padding: 1%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3%;
+  }
+  
+  .player1 {
+    flex: 55%;
+    /* background: yellow; */
+    padding: 1%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3%;
+  }
+  
+  .cardContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    padding-bottom: 5px;
+   
+  }
+  
+  .card {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .details {
+    flex: 30%;
+    padding: 1%;
+    padding-top: 5%;
+    padding-left: 3%;
+    margin-left: 2rem;
+    height: fit-content;
+    margin-top: 4rem;
+    background-color: rgba(16, 15, 15, 0.3);
+    border-radius: 3%;
+  }
+  
+  .name {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    color: black;
+  }
+  
