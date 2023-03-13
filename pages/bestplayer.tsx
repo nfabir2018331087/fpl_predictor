@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
-export default function bestPlayer(){
+export default function BestPlayer(){
     const [best, setBestPlayer] = useState({fname:'any', sname: 'name',position:'pos',point:'point',xps:'xp',price:'$'});
     const [loading, setLoading] = useState(true);
     useEffect(() => {
