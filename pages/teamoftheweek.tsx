@@ -12,12 +12,12 @@ export default function Team() {
   const [gk, setGk] = useState([]);
   const [loading, setLoading] = useState(true);
   const [totalPoint, setTotalPoint] = useState(0);
+  const [gw, setGW] = useState(1);
   const round = (value: number, precision: number) => {
     var multiplier = Math.pow(10, precision || 0);
     return Math.round(value * multiplier) / multiplier;
   };
   useEffect(() => {
-    console.log("team of the hekko hekko");
     const f = async () => {
       try {
         let data = await axios.get("/api/teamoftheweek");
@@ -30,6 +30,7 @@ export default function Team() {
         setFwd(players.fwd);
         setGk(players.gk);
         setTotalPoint(manager.total_points);
+        setGW(manager.gw);
         setLoading(false);
       } catch (err) {
         setLoading(false);
@@ -67,7 +68,7 @@ export default function Team() {
                   color: "black",
                 }}
               >
-                GameWeek 25 |{" "}
+                GameWeek {gw} |{" "}
               </span>{" "}
               <span
                 style={{
@@ -131,6 +132,7 @@ export default function Team() {
             {loading && <Loader color="yellow" size="xl" variant="bars" />}
             {gk.map((item) => (
               <PlayerShow
+                key={item.id}
                 title={item.name}
                 position={item.position}
                 point={item.points}
@@ -153,6 +155,7 @@ export default function Team() {
 
             {def.map((item) => (
               <PlayerShow
+                key={item.id}
                 title={item.name}
                 position={item.position}
                 point={item.points}
@@ -175,6 +178,7 @@ export default function Team() {
 
             {mid.map((item) => (
               <PlayerShow
+                key={item.id}
                 title={item.name}
                 position={item.position}
                 point={item.points}
@@ -196,6 +200,7 @@ export default function Team() {
             {/* fw */}
             {fwd.map((item) => (
               <PlayerShow
+                key={item.id}
                 title={item.name}
                 position={item.position}
                 point={item.points}

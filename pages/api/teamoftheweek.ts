@@ -138,7 +138,8 @@ export default async function handler(
           price: player.now_cost,
           selected: player.selected_by_percent,
           image: image,
-          xps: xps,   // const player = await axios.get(
+          xps: xps, 
+            // const player = await axios.get(
             //   "https://fantasy.premierleague.com/api/dream-team/" + gw + "/"
             // );
             // const playerIds = player.data.team.map((player) => player.element);
