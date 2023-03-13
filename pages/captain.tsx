@@ -91,6 +91,7 @@ export default function Captain() {
 
                 {gk.map((item) => (
                   <PlayerShow
+                  key={item.id}
                     title={item.name}
                     position={item.position}
                     point={item.points}
@@ -103,6 +104,7 @@ export default function Captain() {
               <div className={styles.cardContainer}>
                 {def.map((item) => (
                   <PlayerShow
+                  key={item.id}
                     title={item.name}
                     position={item.position}
                     point={item.points}
@@ -115,6 +117,7 @@ export default function Captain() {
               <div className={styles.cardContainer}>
                 {mid.map((item) => (
                   <PlayerShow
+                  key={item.id}
                     title={item.name}
                     position={item.position}
                     point={item.points}
@@ -131,6 +134,7 @@ export default function Captain() {
                 )}
                 {fwd.map((item) => (
                   <PlayerShow
+                  key={item.id}
                     title={item.name}
                     position={item.position}
                     point={item.points}
@@ -155,6 +159,7 @@ export default function Captain() {
                   }}
                   >
                     <PlayerShow
+                    key={captain.id}
                       title={captain.name}
                       position={captain.position}
                       point={captain.points}
